@@ -38,3 +38,22 @@ export interface ILoginRequest{
     password:string;
 
 }
+
+export interface ISocialAuthBody{
+    email:string;
+    name:string;
+    avatar:string;
+}
+
+export interface IUpdateUserInfo{
+    email:string;
+    name:string;
+}
+
+export interface IUpdatePassword{
+    oldPassword:string;
+    newPassword:string;
+}
+export interface IUpdateAvatar{
+    avatar:string;
+}

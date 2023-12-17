@@ -23,7 +23,7 @@ const userSchema: Schema<IUser> = new Schema({
     },
     password: {
         type: String,
-        required: [true, 'Please enter your password'],
+        // required: [true, 'Please enter your password'],
         // validate: {
         //     validator: function (value: string) {
         //         return passwordRegexPattern.test(value)

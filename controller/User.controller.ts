@@ -80,9 +80,7 @@ export const activateUser = CatchAsyncError(async (req: Request, res: Response, 
 // ################################ Login User ############################################
 export const loginUser = CatchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
     const { email, password } = req.body as ILoginRequest;
-    if (!email || !password) {
-        return next(new ErrorHandler('Please enter email and password', 400))
-    }
+    
     const user = await UserModel.findOne({ email }).select("+password")
     if (!user) {
         return next(new ErrorHandler('Invalid email or password', 400))

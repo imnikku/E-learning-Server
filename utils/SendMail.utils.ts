@@ -1,5 +1,5 @@
 import  nodemailer, {Transporter} from 'nodemailer';
-import { EmailOptions } from '../interface/Email';
+import { EmailOptions } from '../interface/Email.interface';
 import path from 'path';
 import ejs from 'ejs'
 

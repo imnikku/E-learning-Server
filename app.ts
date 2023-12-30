@@ -2,8 +2,8 @@ import express, { NextFunction, Request, Response } from 'express';
 export const app=express()
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import { ErrorMiddleware } from './middleware/error';
-import userRoute from './routes/user.route';
+import { ErrorMiddleware } from './middleware/Error.middleware';
+import userRoute from './routes/User.route';
 
 // Add body parser and add limit 
 app.use(express.json({limit:'50mb'}))

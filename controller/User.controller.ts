@@ -1,16 +1,16 @@
 import { NextFunction, Request, Response } from "express";
-import { CatchAsyncError } from "../middleware/catchAsyncError";
-import { IActivateRequest, IActivationToken, ILoginRequest, IRegistrationBody, IUpdatePassword, ISocialAuthBody, IUpdateUserInfo, IUser, IUpdateAvatar } from "../interface/User";
-import ErrorHandler from "../utils/ErrorHandler";
+import { CatchAsyncError } from "../middleware/CatchAsyncError.middleware";
+import { IActivateRequest, IActivationToken, ILoginRequest, IRegistrationBody, IUpdatePassword, ISocialAuthBody, IUpdateUserInfo, IUser, IUpdateAvatar } from "../interface/User.interface";
+import ErrorHandler from "../utils/ErrorHandler.utils";
 import jwt, { JwtPayload, Secret } from 'jsonwebtoken'
 import ejs from 'ejs'
-import { UserModel } from "../model/user.model";
+import { UserModel } from "../model/User.model";
 import path from "path";
-import sendEmail from "../utils/sendMail";
-import { accessTokenOptions, refreshTokenOptions, sendToken } from "../utils/jwt";
-import { radis } from "../utils/radisConfig";
-import { IGetUserAuthInfoRequest } from "../interface/request";
-import { getUserById } from "../services/user.service";
+import sendEmail from "../utils/SendMail.utils";
+import { accessTokenOptions, refreshTokenOptions, sendToken } from "../utils/Jwt.utils";
+import { radis } from "../utils/RadisConfig.utils";
+import { IGetUserAuthInfoRequest } from "../interface/Request.interface";
+import { getUserById } from "../services/User.service";
 import {v2 as cloudinary} from 'cloudinary'
 
 // ############################ Register User #########################################

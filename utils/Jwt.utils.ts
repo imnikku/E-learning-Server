@@ -1,7 +1,7 @@
 import { Response } from "express";
-import { IUser } from "../interface/User";
-import { ITokenOption } from "../interface/jwt";
-import { radis } from "./radisConfig";
+import { IUser } from "../interface/User.interface";
+import { ITokenOption } from "../interface/Jwt.interface";
+import { radis } from "./RadisConfig.utils";
 
 
 

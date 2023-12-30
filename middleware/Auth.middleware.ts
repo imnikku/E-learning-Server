@@ -3,11 +3,11 @@
 // ################################### Authenticate User #########################################
 
 import { NextFunction, Response } from "express";
-import { CatchAsyncError } from "./catchAsyncError";
-import ErrorHandler from "../utils/ErrorHandler";
+import { CatchAsyncError } from "./CatchAsyncError.middleware";
+import ErrorHandler from "../utils/ErrorHandler.utils";
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import { radis } from "../utils/radisConfig";
-import { IGetUserAuthInfoRequest } from "../interface/request";
+import { radis } from "../utils/RadisConfig.utils";
+import { IGetUserAuthInfoRequest } from "../interface/Request.interface";
 
 export const isAuthenticated = CatchAsyncError(async (req: IGetUserAuthInfoRequest, res: Response, next: NextFunction) => {
     try {

@@ -1,6 +1,6 @@
 require('dotenv').config()  // Env File Configation on top of the file 
 import {app} from './app'
-import connectDb from './utils/dbConfig'
+import connectDb from './utils/DbConfig.utils'
 import {v2 as cloudinary} from 'cloudinary'
 
 

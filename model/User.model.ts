@@ -1,8 +1,8 @@
 import { Model, Schema, model } from "mongoose";
 import bcrypt from 'bcryptjs';
-import { IUser } from "../interface/User";
-import { emailRegexPattern, passwordRegexPattern } from "../utils/regex";
+import { emailRegexPattern, passwordRegexPattern } from "../utils/Regex.utils";
 import jwt from 'jsonwebtoken';
+import { IUser } from "../interface/User.interface";
 
 const userSchema: Schema<IUser> = new Schema({
     name: {

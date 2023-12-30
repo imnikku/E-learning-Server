@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const User_controller_1 = require("../controller/User.controller");
+const Auth_middleware_1 = require("../middleware/Auth.middleware");
+const Login_validator_1 = require("../validator/Login.validator");
+const userRoute = express_1.default.Router();
+userRoute.post('/registration', User_controller_1.registrationUser);
+userRoute.post('/activate-user', User_controller_1.activateUser);
+userRoute.post('/login', Login_validator_1.LoginValidator, User_controller_1.loginUser);
+userRoute.post('/social-auth', User_controller_1.socialAuth);
+userRoute.get('/logout', Auth_middleware_1.isAuthenticated, User_controller_1.logoutUser);
+userRoute.get('/refresh-token', Auth_middleware_1.isAuthenticated, User_controller_1.updateAccessToken);
+userRoute.get('/me', Auth_middleware_1.isAuthenticated, User_controller_1.getUserInfo);
+userRoute.put('/update-user-info', Auth_middleware_1.isAuthenticated, User_controller_1.updateUserInfo);
+userRoute.put('/change-password', Auth_middleware_1.isAuthenticated, User_controller_1.updatePassword);
+userRoute.put('/update-profile-pic', Auth_middleware_1.isAuthenticated, User_controller_1.updateAvatar);
+exports.default = userRoute;

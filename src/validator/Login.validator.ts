@@ -13,7 +13,6 @@ export const LoginValidator=(req:Request,res:Response,next:NextFunction)=>{
             "any.required": "Please enter password",
             "string.base":"password must be string"
          }),
-    
     })
     const {error}=schema.validate(req.body,{abortEarly:false})
     if(error){
@@ -23,7 +22,6 @@ export const LoginValidator=(req:Request,res:Response,next:NextFunction)=>{
         next()
 
     }
-    // console.log(error)
 
 
 

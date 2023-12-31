@@ -25,6 +25,5 @@ const LoginValidator = (req, res, next) => {
     else {
         next();
     }
-    // console.log(error)
 };
 exports.LoginValidator = LoginValidator;

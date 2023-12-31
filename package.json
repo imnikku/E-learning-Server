@@ -10,7 +10,7 @@
   "author": "Nitesh kumar singh",
   "license": "ISC",
   "engines": {
-    "node": ">=18.18.0 <20.7.0"
+    "node": ">=16.18.0 <18.18.0"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",

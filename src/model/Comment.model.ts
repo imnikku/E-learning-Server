@@ -8,4 +8,4 @@ export const CommentSchema = new Schema<IComment>({
 
 }, { timestamps: true })
 
-export const CommentModel: Model<IComment> = model('comment', CommentSchema)
+// export const CommentModel: Model<IComment> = model('comment', CommentSchema)

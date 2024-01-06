@@ -10,4 +10,4 @@ export const ReviewSchema = new Schema<IReview>({
     comment: String
 }, { timestamps: true })
 
-export const ReviewModel: Model<IReview> = model('review', ReviewSchema)
+// export const ReviewModel: Model<IReview> = model('review', ReviewSchema)

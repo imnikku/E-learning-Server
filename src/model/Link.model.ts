@@ -6,4 +6,4 @@ export const LinkSchema = new Schema<ILink>({
     url: String,
 }, { timestamps: true })
 
-export const LinkModel: Model<ILink> = model('link', LinkSchema)
+// export const LinkModel: Model<ILink> = model('link', LinkSchema)

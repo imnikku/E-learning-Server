@@ -17,4 +17,4 @@ export const CourseDataSchema = new Schema<ICourseData>({
 
 }, { timestamps: true })
 
-export const CourseDataModel: Model<ICourseData> = model('coursedata', CourseDataSchema)
+// export const CourseDataModel: Model<ICourseData> = model('coursedata', CourseDataSchema)
